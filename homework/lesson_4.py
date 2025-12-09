@@ -1,3 +1,5 @@
-print("Hello World1")
+print("Hello World")
 name = "Ivan"
 city = "Moscow"
+print (id(name))
+
