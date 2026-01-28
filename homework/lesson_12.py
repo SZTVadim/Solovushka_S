@@ -21,7 +21,7 @@ all_departments = {employee["отдел"] for employee in employees.values()}
 print(all_departments)
 petr = employees.pop("Петр")
 
-department_to_names = {} # Списала из чата, не могу понять эту тему
+department_to_names = {}  # Списала из чата, не могу понять эту тему
 for name, info in employees.items():
     department = info["отдел"]
     if department not in department_to_names:
