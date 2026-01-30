@@ -2,23 +2,27 @@
 Тема: Функции и условные конструкции в Python
 """
 
+
 # ЗАДАНИЕ 1: Функции и условия
 
 # 1. Создайте функцию calculate_total(price, tax_percent):
 #    - возвращает итоговую цену с налогом
 #    - если налог > 20% или цена < 0, возвращает сообщение об ошибке
 
+
 def calculate_total(price, tax_percent):
     if tax_percent > 20 or price < 0:
         return "Ошибка"
-    itogo = price + (price * tax_percent / 100)
-    return itogo
+    total = price + (price * tax_percent / 100)
+    return total
+
 
 # 2. Создайте функцию get_level(points):
 #    - points >= 100 → "Эксперт"
 #    - points >= 50 → "Продвинутый"
 #    - points >= 20 → "Начинающий"
 #    - иначе → "Новичок"
+
 
 def get_level(points):
     if points >= 100:
@@ -30,6 +34,7 @@ def get_level(points):
             else:
                 print("Новичок")
 
+
 # ЗАДАНИЕ 2: Функции с условиями и match/case
 
 # 1. Создайте функцию process_status(status) с match/case:
@@ -38,6 +43,7 @@ def get_level(points):
 #    - "pending" → "Статус в ожидании"
 #    - "blocked" → "Статус заблокирован"
 #    - иначе → "Неизвестный статус"
+
 
 def process_status(status):
     match status:
