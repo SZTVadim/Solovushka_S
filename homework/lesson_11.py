@@ -1,3 +1,4 @@
+
 """
 Тема: tuple
 """
@@ -19,13 +20,13 @@
 coordinates = (10, 20, 30, 20, 10, 20, 40)
 print(coordinates[0])
 print(coordinates[-1])
-print(coordinates[1:5])
+print(coordinates[1:4])
 print(30 in coordinates)
 print(coordinates.index(20))
 print(coordinates.count(20))
 
 if 50 in coordinates:
-    print(coordinates.index(50))
+    print(coordinates.count(50))
 else:
     print("Число 50 не найдено в кортеже")
 print(len(coordinates))
@@ -62,6 +63,6 @@ print(first)
 print(middle)
 print(last)
 numbers2 = list(numbers)
-numbers3 = tuple(x for x in range(10) if x % 2 == 0)
-numbers4 = tuple(x * 2 for x in range(1, 6))
+numbers3 = tuple(x for x in range(11) if x % 2 == 0)
+numbers4 = tuple(x ** 2 for x in range(1, 6))
 numbers5 = (42,)
