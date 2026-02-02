@@ -26,13 +26,13 @@ def calculate_total(price, tax_percent):
 
 def get_level(points):
     if points >= 100:
-        print("Эксперт")
-        if points >= 50:
-            print("Продвинутый")
-            if points >= 20:
-                print("Начинающий")
-            else:
-                print("Новичок")
+        return "Эксперт"
+    elif points >= 50:
+        return "Продвинутый"
+    elif points >= 20:
+        return "Начинающий"
+    else:
+        return "Новичок"
 
 
 # ЗАДАНИЕ 2: Функции с условиями и match/case
@@ -48,12 +48,12 @@ def get_level(points):
 def process_status(status):
     match status:
         case "active":
-            print("Статус активен")
+            return "Статус активен"
         case "inactive":
-            print("Статус неактивен")
+            return "Статус неактивен"
         case "pending":
-            print("Статус в ожидании")
+            return "Статус в ожидании"
         case "blocked":
-            print("Статус заблокирован")
+            return "Статус заблокирован"
         case _:
-            print("Неизвестный статус")
+            return "Неизвестный статус"
