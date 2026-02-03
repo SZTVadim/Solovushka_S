@@ -15,9 +15,11 @@ class Book:
         self.title = title
         self.author = author
         self.pages = pages
+
     def get_info(self):
         return f"'{self.title}' автор {self.author}, {self.pages} стр."
-    def is_long (self):
+
+    def is_long(self):
         if self.pages > 300:
             return True
         else:
@@ -48,9 +50,11 @@ class BankAccount:
     def __init__(self, owner, balance=0):
         self.owner = owner
         self.balance = balance
+
     def deposit(self, amount):
         self.balance = self.balance + amount
         return self.balance
+
     def withdraw(self, amount):
         self.balance = self.balance - amount
         if self.balance > 0:
@@ -58,10 +62,12 @@ class BankAccount:
             return True
         else:
             return False, "Недостаточно средств"
+
     def get_balance(self):
         return self.balance
 
-account = BankAccount( "Svetlana" ,100 )
+
+account = BankAccount("Svetlana", 100)
 result = account.deposit(100)
 result1 = account.withdraw(100)
 result2 = account.withdraw(300)
