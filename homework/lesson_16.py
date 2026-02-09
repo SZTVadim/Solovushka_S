@@ -20,10 +20,7 @@ class Book:
         return f"'{self.title}' автор {self.author}, {self.pages} стр."
 
     def is_long(self):
-        if self.pages > 300:
-            return True
-        else:
-            return False
+        return self.pages > 300
 
 
 book1 = Book("Война и мир", "Толстой", 1225)
@@ -32,6 +29,7 @@ book3 = Book("Сумерки", "Стефани Майер", 566)
 print(book1.get_info())
 print(book2.get_info())
 print(book3.get_info())
+
 
 # ЗАДАНИЕ 2: Класс BankAccount (Банковский счёт)
 #
@@ -56,12 +54,11 @@ class BankAccount:
         return self.balance
 
     def withdraw(self, amount):
-        self.balance = self.balance - amount
-        if self.balance > 0:
+        if self.balance >= amount:
             self.balance = self.balance - amount
             return True
         else:
-            return False, "Недостаточно средств"
+            return "Недостаточно средств"
 
     def get_balance(self):
         return self.balance
@@ -71,4 +68,5 @@ account = BankAccount("Svetlana", 100)
 result = account.deposit(100)
 result1 = account.withdraw(100)
 result2 = account.withdraw(300)
+print(result2)
 print(account.get_balance())
