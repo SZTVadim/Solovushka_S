@@ -10,9 +10,9 @@
 
 def log_execution(func):
     def wrapper(*args, **kwargs):
-        print(f"Функция запущена")
+        print("Функция запущена")
         result = func(*args, **kwargs)
-        print(f"Функция завершена")
+        print("Функция завершена")
         return result
 
     return wrapper
